@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="hedbox">
+            <div class="box1"> <button onclick="document.execCommand( 'bold',false,null ); "
+                    title=" Bold Highlighted Text (ctrl+B) "> <i class="fa-solid fa-bold"></i> </button></div>
+            <div class="box2"> <button onclick="document.execCommand( 'italic',false,null ); "
+                    title=" Italicize Highlighted Text ( ctrl+I) "> <i class="fa-solid fa-italic"></i></button></div>
+            <div class="box3"> <button onclick="document.execCommand( 'underline',false,null ); "
+                    title=" Underline Highlighted Text (ctrl+U) "> <i class="fa-solid fa-underline"></i></button></div>
+            <div class="box4"> <select name="font-family" id="font" onchange="changeFont()" title="Font Style">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Impect">Impect</option>
+                    <option value="Times">Times</option>
+                    <option value="sans-serif">sans-serif</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Gill Sans">Gill Sans</option>
+                    <option value="monospace">monospace</option>
+                </select>
+                <select name="font-size" id="size" onclick="Fontsize()" title="Font Size">
+                    <option value="10px">1</option>
+                    <option value="12px">2</option>
+                    <option value="14px">3</option>
+                    <option value="16px">4</option>
+                    <option value="18px">5</option>
+                    <option value="20px">6</option>
+                    <option value="22px">7</option>
+                    <option value="24px">8</option>
+                    <option value="26px">9</option>
+                    <option value="28px">10</option>
+                    <option value="30px">11</option>
+                    <option value="32px">12</option>
+                </select>
+            </div>
+
+            <div class="box5"> <button onclick="document.execCommand('strikethrough',false,null);"
+                    title="strikethrough Highlighted Text"><i class="fa-solid fa-strikethrough"></i></button></div>
+            <div class="box6"> <button onclick="document.execCommand('justifyCenter',false,null);"
+                    title="Align Text Center Highlighted Text"><i
+                        class="fa-sharp fa-solid fa-align-center"></i></button></div>
+            <div class="box7"> <button onclick="document.execCommand('justifyRight',false,null);"
+                    title="Align Text Right"><i class="fa-solid fa-align-right"></i></button></div>
+            <div class="box8"> <button onclick="document.execCommand('justifyLeft',false,null);"
+                    title="Align Text Left"><i class="fa-solid fa-align-left"></i></button></div>
+            <!-- <div class="box9"> <button id="fcolor" onchange="changecolor()" title="Font Color"> </button></div> -->
+            <input class="colorfont" type="color" onclick="changecolor()" id="fcolor" title="Font Color">
+            <input type="text" id="inp" placeholder="Search">
+            <button onclick="higlight()" class="btn">Search</button>
+        </div>
+    </div>
+    <br>
+    </div>
+    <div class="content" contenteditable="true">
+        <p id="para" style="color: rgb(2, 2, 2); font-size: 15px;padding: 5px;"> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Inventore perferendis corrupti quis aliquid!
+            Aspernatur Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perferendis corrupti quis
+            aliquid!
+            Aspernatur Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore perferendis corrupti quis
+            aliquid!
+            Aspernatur.</p>
+        <p style="text-align: center; font-size: 25px;color: rgb(232, 115, 115);"> Ghulam Murtaza CCO-117260</p>
+    </div>
+<script src="app.js"></script>
+</body>
+
+</html>
